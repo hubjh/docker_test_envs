@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  lab:
+    # image: jupyter/pyspark-notebook:latest
+    build: .
+    ports:
+      - "8888:8888"
+    volumes:
+      - ./workspace:/home/jovyan/work
+      - /home/justin/projects/home_welfare_solutions/data/test/games:/home/jovyan/work/data
+    extra_hosts:
+      - 'host.docker.internal:172.17.0.1'
+    command: ["start-notebook.sh", "--NotebookApp.token=''", "--NotebookApp.password=''"]  # 토큰 및 비밀번호 없이 실행
