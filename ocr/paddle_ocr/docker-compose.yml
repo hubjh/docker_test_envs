@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  paddle-ocr:
+    build:
+      context: .
+      # dockerfile: .devcontainer/Dockerfile
+    ports:
+      - "8888:8888"
+    volumes:
+      - ./workspace:/root/workspace
+    working_dir: /root/workspace
+    command: ["jupyter", "notebook", "--ip=0.0.0.0", "--allow-root", "--no-browser", "--NotebookApp.token=''"]

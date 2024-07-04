@@ -1,0 +1,7 @@
+paddlepaddle==2.6.1
+paddleocr
+opencv-python-headless
+requests 
+pandas
+matplotlib
+numpy==1.21.6

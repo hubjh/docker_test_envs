@@ -1,0 +1,6 @@
+easyocr
+opencv-python-headless
+requests 
+pandas
+matplotlib
+pillow
