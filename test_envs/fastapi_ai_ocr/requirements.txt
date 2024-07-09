@@ -1,0 +1,10 @@
+fastapi
+uvicorn
+pydantic
+paddlepaddle==2.6.1
+paddleocr
+opencv-python-headless
+requests 
+pandas
+numpy==1.21.6
+easyocr

@@ -1,0 +1,23 @@
+# version: '3.8'
+
+# services:
+#   ai-ocr-test:
+#     build: .
+#     ports:
+#       - "8000:80"
+#     volumes:
+#       - ./app:/app
+
+
+version: '3.8'
+
+services:
+  fastapi-ai-ocr:
+    build:
+      context: .
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./app:/app
+    working_dir: /app
+    command: ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000", "--reload"]
