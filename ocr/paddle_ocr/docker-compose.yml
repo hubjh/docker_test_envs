@@ -6,7 +6,7 @@ services:
       context: .
       # dockerfile: .devcontainer/Dockerfile
     ports:
-      - "8888:8888"
+      - "8889:8888"
     volumes:
       - ./workspace:/root/workspace
     working_dir: /root/workspace
