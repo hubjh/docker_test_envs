@@ -16,6 +16,9 @@ RUN python3 -m pip install jupyter
 
 RUN python3 --version
 
+# EasyOCR 모델 파일 미리 다운로드
+RUN python3 -c "import easyocr; easyocr.Reader(['en', 'ko'])"
+
 # Set the working directory
 WORKDIR /workspace
 COPY . /workspace
